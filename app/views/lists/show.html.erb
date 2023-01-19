@@ -1,0 +1,21 @@
+<p><strong>List details:</strong></p>
+<p style="color: green"><%= notice %></p>
+
+<%= render @list %>
+
+<div>
+  <%= link_to "Back to list overview", lists_path %>
+</div>
+
+<br>
+
+<p><strong>List</strong></p>
+<ul class="list-group">
+  <% @list.movies.each do |movie| %>
+    <div><li class="list-group-item"><%= movie.title %>
+    </li>
+    <li class="list-group-item"><%= movie.overview %></li>
+    <li class="list-group-item"><%= movie.rating %></li>
+    </div>
+  <% end %>
+</ul>
